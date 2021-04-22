@@ -1,0 +1,26 @@
+package Arrays;
+import java.util.*;
+import java.io.*;
+public class hourglass {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of the array");
+		int l = sc.nextInt();
+		int b = sc.nextInt();
+		int[][] arr = new int[l][b];
+		for(int i = 0; i < l; i++) {
+			for(int j = 0; j < b; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		for(int i = 0; i < l; i++) {
+			for(int j = 0; j < b; j++) {
+				System.out.print(arr[i][j]);
+			}
+			System.out.println();
+		}
+		
+	}
+
+}

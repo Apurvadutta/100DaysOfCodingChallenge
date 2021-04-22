@@ -1,0 +1,71 @@
+package Arrays;
+import java.util.*;
+import java.io.*;
+
+public class reversingArray {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of the array");
+		int n = sc.nextInt();
+		int arr[] = new int[n];
+		System.out.println("Enter the elements of the array");
+		for(int i = n-1; i >= 0; i--) {
+			arr[i] = sc.nextInt();
+		}
+		for(int k = 0; k < n; k++) {
+			System.out.println(arr[k]);
+		}
+	}
+
+}
+
+
+
+
+
+
+
+package Arrays;
+import java.util.*;
+import java.io.*;
+
+public class dynamicArray {
+	
+	List<Integer> seq = new ArrayList<Integer>();
+	List<List<Integer>> seqList = new ArrayList<List<Integer>>();
+	int lastAnswer = 0;
+	
+	public DynamicArray(int n) {
+		for(int i = 0; i < n; i++) {
+		seq = new ArrayList<Integer>();
+		seqList.add(seq);
+		} 
+	}
+    public void append(int x, int y, int n) {
+    	int idx = (x ^ lastAnswer) % n;
+    	seq = seqList.get(idx);
+    	seq.add(y);
+    }
+    public void print(int x, int y, int n) {
+    	int idx = (x ^ lastAnswer) % n;
+    	int siz = arr.size();
+    	lastAnswer = y % siz;
+    	System.out.println(lastAnswer);
+    }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int Q = sc.nextInt();
+		DynamicArray arr= new DynamicArray(n);
+		int query = sc.nextInt();
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		if(query == 1) {
+			
+		}
+		
+
+	}
+
+}

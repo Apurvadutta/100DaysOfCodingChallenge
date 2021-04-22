@@ -1,0 +1,41 @@
+package Arrays;
+import java.util.*;
+import java.io.*;
+
+public class dynamicArray {
+	
+	List<Integer> seq = new ArrayList<Integer>();
+	List<List<Integer>> seqList = new ArrayList<List<Integer>>();
+	int lastAnswer = 0;
+	
+	public void DynamicArray(int n) {
+		seq = new ArrayList<Integer>();
+		seqList.add(seq);
+	}
+    public void append(int x, int y, int n) {
+    	int idx = (x ^ lastAnswer) % n;
+    	seq = seqList.get(idx);
+    	seq.add(y);
+    }
+    public void print(int x, int y, int n) {
+    	int idx = (x ^ lastAnswer) % n;
+    	int siz = arr.size();
+    	lastAnswer = y % siz;
+    	System.out.println(lastAnswer);
+    }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int Q = sc.nextInt();
+		DynamicArray arr= new DynamicArray(n);
+		int query = sc.nextInt();
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		if(query == 1) {
+			
+		}
+		
+
+	}
+
+}
