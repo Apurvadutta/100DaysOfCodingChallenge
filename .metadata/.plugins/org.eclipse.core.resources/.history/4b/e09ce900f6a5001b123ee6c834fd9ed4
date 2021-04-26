@@ -5,13 +5,10 @@ public class reversePrint {
  
 	static void reverse(LinkedList<Integer> ll) {
 		LinkedList<Integer> newll = new LinkedList<>();
-		while(!ll.isEmpty()) {
-			newll.add(ll.removeLast());
+		while(ll != null) {
+			newll.add( ll.pop());
 		}
 		System.out.println(newll);
-		for(Integer a : newll) {
-			System.out.println(a);
-		}
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -26,7 +23,6 @@ public class reversePrint {
 			for(int j = 0; j < n; j++) {
 				ll.add(sc.nextInt());
 			}
-			System.out.println(ll);
 		    reverse(ll);
 		}
 	}

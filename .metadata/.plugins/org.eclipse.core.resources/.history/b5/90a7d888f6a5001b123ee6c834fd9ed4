@@ -6,12 +6,9 @@ public class reversePrint {
 	static void reverse(LinkedList<Integer> ll) {
 		LinkedList<Integer> newll = new LinkedList<>();
 		while(!ll.isEmpty()) {
-			newll.add(ll.removeLast());
+			newll.add( ll.getLast());
 		}
 		System.out.println(newll);
-		for(Integer a : newll) {
-			System.out.println(a);
-		}
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
