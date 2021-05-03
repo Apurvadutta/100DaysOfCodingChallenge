@@ -5,9 +5,8 @@ import java.text.*;
 import java.util.*;
 import java.util.regex.*;
 
-public class compareTwoLinkedList {
-
-    static class SinglyLinkedListNode {
+public class mergeTwoSortedLinkedLists {
+	static class SinglyLinkedListNode {
         public int data;
         public SinglyLinkedListNode next;
 
@@ -39,15 +38,19 @@ public class compareTwoLinkedList {
         }
     }
 
-    static boolean compareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
-        while(head1 != null && head2 != null && head1.data == head2.data){
-            head1 = head1.next;
-            head2 = head2.next;
-        }
-        return (head1 == head2) ? true : false;
-
-
+    static SinglyLinkedListNode mergeLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+    	if(head1 == null) return head2;
+    	if(head2 == null) return head1;
+    	if(head1.data < head2.data) {
+    		head1.next = mergeLists(head1.next, head2);
+    		return head1;
+    	}else {
+    		head2.next = mergeLists(head1, head2.next);
+    		return head2;
+    	}
+    	
     }
+
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -69,10 +72,13 @@ public class compareTwoLinkedList {
                 llist2.insertNode(scanner.nextInt());
             }
 
-            boolean result = compareLists(llist1.head, llist2.head);
+            SinglyLinkedListNode llist3 = mergeLists(llist1.head, llist2.head);
+            while(llist3 != null) {
+            	System.out.println(llist3.data);
+            	llist3 = llist3.next;
+            }
             
-            System.out.println(result == true ? "true" : "false");
 
         }
-    }
 
+}

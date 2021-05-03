@@ -39,6 +39,18 @@ public class compareTwoLinkedList {
         }
     }
 
+    public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter) throws IOException {
+        while (node != null) {
+            bufferedWriter.write(String.valueOf(node.data));
+
+            node = node.next;
+
+            if (node != null) {
+                bufferedWriter.write(sep);
+            }
+        }
+    }
+
     static boolean compareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
         while(head1 != null && head2 != null && head1.data == head2.data){
             head1 = head1.next;
@@ -71,8 +83,11 @@ public class compareTwoLinkedList {
 
             boolean result = compareLists(llist1.head, llist2.head);
             
-            System.out.println(result == true ? "true" : "false");
+            System.out.println(result == true ? 1 : 0);
 
         }
-    }
 
+
+        scanner.close();
+    }
+}
