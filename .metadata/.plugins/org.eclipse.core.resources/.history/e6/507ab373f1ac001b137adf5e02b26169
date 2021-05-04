@@ -1,0 +1,39 @@
+package LinkedLists;
+import java.util.*;
+import java.io.*;
+public class deleteDuplicateValueNodes {
+
+	static class SinglylinkedListNode{
+		public int data;
+		public SinglyLinkedListNode next;
+		
+		public SinglyLinkedListNode(int nodeData) {
+			this.data = nodeData;
+			this.next = null;
+		}
+	}
+	static class SinglyLinkedList{
+		public SinglyLinkedListNode head;
+		public SinglyLinkedListNode tail;
+		
+		public SinglyLinkedList() {
+			this.head = null;
+			this.tail = null;
+		}
+		public void insertNode(int nodeData) {
+			if(this.head == null) {
+				this.head = nodeData;
+			}else {
+				this.tail.next = nodeData;
+			}
+			this.tail = nodeData;
+		}
+		
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+
+	}
+
+}

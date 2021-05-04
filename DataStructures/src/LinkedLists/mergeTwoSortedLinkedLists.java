@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.regex.*;
 
 public class mergeTwoSortedLinkedLists {
+	
 	static class SinglyLinkedListNode {
         public int data;
         public SinglyLinkedListNode next;
