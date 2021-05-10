@@ -1,0 +1,19 @@
+package introduction;
+
+interface Calculator{
+	void add(int num1, int num2);
+	
+}
+class Calc{
+	public static void addSomething(int num1, int num2) {
+		System.out.println(num1+" and "+num2+" addition is: "+(num1+num2));
+	}
+}
+public class MethodReferencesApp {
+
+	public static void main(String[] args) {
+		Calc.addSomething(10,20);
+
+	}
+
+}

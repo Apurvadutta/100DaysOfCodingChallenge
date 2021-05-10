@@ -1,0 +1,24 @@
+package JavaClasses;
+
+public class DataTypes {
+	public static void main(String[] kuchBhi) {
+	// variable naming conventions:
+//		-should not start with number
+//		-should not start with special symbols
+//		- _ (underscore)
+//		- $ (dollar)
+//		-alphaNumeric characters
+//		- should not be a keyword
+//		- camelCase convention
+		//Datatypes
+//		int anmolRoll = 12;
+//		int ronikRoll = 23;
+//		System.out.println(anmolRoll);
+//		System.out.println("Ronik's roll no. is = " + ronikRoll);
+		
+		char _ronikBloodGroup = 'b';
+		char $anmolBloodGroup = 'a';
+		System.out.println("ronik =          " + _ronikBloodGroup 
+				+                  " anmol = " + $anmolBloodGroup);
+	}
+}
